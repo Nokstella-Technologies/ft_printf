@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 18:19:52 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 18:05:42 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 18:06:47 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	check_pointers(char *flag, t_format *buffer)
 	}
 	if(a == 1)
 	{
-		a = -1;
+		a = 0;
 	}
 	return (a);
 }
@@ -74,7 +74,7 @@ int check_while(char *formating, t_format *buffer, char *conversion)
 		else if(formating[a] == '.')
 			a += check_pointers(&formating[a],buffer);
 		else
-			return(ft_new_errors(buffer,1));
+			return(a);
 	}
 	if(conversion - formating - a == 0)
 		return(1 + conversion - formating);
