@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 18:19:52 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 17:35:06 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 17:38:44 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,15 @@ int	check_pointers(char *flag, t_format *buffer)
 {
 	int a;
 
-	a = 0;
+	a = 1;
 	while(ft_isdigit(flag[a]))
 	{
 		buffer->cf_now->flag_pointer *= 10;
 		buffer->cf_now->flag_pointer += flag[a] - 48;
 		a++;
 	}
+	if(buffer->cf_now->flag_pointer == 0)
+		a = 0;
 	return (a);
 }
 
@@ -69,7 +71,7 @@ int check_while(char *formating, t_format *buffer, char *conversion)
 			a += check_min_width(&formating[a],buffer);
 		else if(formating[a] == '.')
 		{
-			a += check_pointers(&formating[a + 1],buffer);
+			a += check_pointers(&formating[a],buffer);
 		}
 		else
 			return(ft_new_errors(buffer,1));
