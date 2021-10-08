@@ -6,13 +6,11 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 19:01:01 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 16:47:51 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 16:51:29 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-
 
 void	ft_get_string(t_format *buffer)
 {
@@ -56,6 +54,8 @@ void	ft_get_adress(t_format *buffer)
 	int		len;
 
 	buffer->formated_src = ft_itoa_base(va_arg(buffer->args_c, size_t), HEX);
+	if(buffer->formated_src == NULL)
+		buffer->formated_src = ft_strdup("0");
 	len = ft_strlen(buffer->formated_src);
 	buffer->cf_now->flag_hashtag = TRUE;
 	hastag_flag(buffer, &len);

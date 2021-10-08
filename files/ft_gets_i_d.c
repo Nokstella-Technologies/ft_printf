@@ -6,12 +6,12 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 13:52:11 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 15:51:22 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 16:49:43 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
+
 void	verify_signed_positin(t_format *buffer)
 {
 	char	*tmp;
