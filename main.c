@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 13:28:39 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 16:32:31 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 17:24:56 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,17 +47,17 @@ int main(void)
 	// printf("= %d\n",printf("%22s.", teste));
 	
 	
-	// printf("TESTE STRING\033[1;32m\n");
-	// printf(" len = %d\n",ft_printf("MyFunc =<%-22s>", teste));
-	// printf(" len = %d\n",printf("Origin =<%-22s>", teste));
-	// printf(" len = %d\n",ft_printf("MyFunc =<%22s>", teste));
-	// printf(" len = %d\n",printf("Origin =<%22s>", teste));
+	printf("TESTE STRING\033[1;32m\n");
+	printf(" len = %d\n",ft_printf("MyFunc =<%-22s>", teste));
+	printf(" len = %d\n",printf("Origin =<%-22s>", teste));
+	printf(" len = %d\n",ft_printf("MyFunc =<%22s>", teste));
+	printf(" len = %d\n",printf("Origin =<%22s>", teste));
 	
-	// printf("\033[1;0m\nTESTE MULTI STRING\033[1;32m\n");
-	// printf(" len = %d\n",ft_printf("MyFunc =<%-7s> <%-7s> <%-7s>", teste,teste3, teste2));
-	// printf(" len = %d\n",printf("Origin =<%-7s> <%-7s> <%-7s>",teste, teste3, teste2));
-	// printf(" len = %d\n",printf("Origin =<%22s> <%22s> <%22s>",teste, "coco", "lelasdasde"));
-	// printf(" len = %d\n",ft_printf("MyFunc =<%22s> <%22s> <%22s>",teste, "coco", "lelasdasde"));
+	printf("\033[1;0m\nTESTE MULTI STRING\033[1;32m\n");
+	printf(" len = %d\n",ft_printf("MyFunc =<%-7s> <%-7s> <%-7s>", teste,teste3, teste2));
+	printf(" len = %d\n",printf("Origin =<%-7s> <%-7s> <%-7s>",teste, teste3, teste2));
+	printf(" len = %d\n",printf("Origin =<%22s> <%22s> <%22s>",teste, "coco", "lelasdasde"));
+	printf(" len = %d\n",ft_printf("MyFunc =<%22s> <%22s> <%22s>",teste, "coco", "lelasdasde"));
 	
 
 	printf(" len = %d\n",printf(" %p %p ", 0, 0));

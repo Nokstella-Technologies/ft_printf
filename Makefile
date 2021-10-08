@@ -53,7 +53,7 @@ git:
 	git push
 
 teste2: update re
-	make m -C ./teste
+	make b -C ./teste
 
 update: 
 	git pull
