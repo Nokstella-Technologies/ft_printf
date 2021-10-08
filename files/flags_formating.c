@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 09:19:14 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 17:46:18 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 17:54:36 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ void	minus_flag(t_format *buffer, int *len, char *tmp)
 void	pointer_flag(t_format *buffer, int *len)
 {
 	char	*tmp;
-	if (buffer->cf_now->flag_pointer > *len)
+	if (buffer->cf_now->flag_pointer > *len && buffer->formated_src[0] != 0)
 	{
 		if(buffer->cf_now->conversion == 's')
 		{
-			*len = buffer->cf_now->flag_pointer;
+			*len += buffer->cf_now->flag_pointer;
 			buffer->formated_src[*len] = 0;
 		}
 		else if (buffer->cf_now->conversion == 'd' || 

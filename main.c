@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 13:28:39 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 17:24:56 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 17:49:29 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,38 +50,40 @@ int main(void)
 	printf("TESTE STRING\033[1;32m\n");
 	printf(" len = %d\n",ft_printf("MyFunc =<%-22s>", teste));
 	printf(" len = %d\n",printf("Origin =<%-22s>", teste));
+	printf(" len = %d\n",ft_printf("MyFunc =<%.1s>", ""));
+	printf(" len = %d\n",printf("Origin =<%.1s>", ""));
 	printf(" len = %d\n",ft_printf("MyFunc =<%22s>", teste));
 	printf(" len = %d\n",printf("Origin =<%22s>", teste));
 	
-	printf("\033[1;0m\nTESTE MULTI STRING\033[1;32m\n");
-	printf(" len = %d\n",ft_printf("MyFunc =<%-7s> <%-7s> <%-7s>", teste,teste3, teste2));
-	printf(" len = %d\n",printf("Origin =<%-7s> <%-7s> <%-7s>",teste, teste3, teste2));
-	printf(" len = %d\n",printf("Origin =<%22s> <%22s> <%22s>",teste, "coco", "lelasdasde"));
-	printf(" len = %d\n",ft_printf("MyFunc =<%22s> <%22s> <%22s>",teste, "coco", "lelasdasde"));
+	// printf("\033[1;0m\nTESTE MULTI STRING\033[1;32m\n");
+	// printf(" len = %d\n",ft_printf("MyFunc =<%-7s> <%-7s> <%-7s>", teste,teste3, teste2));
+	// printf(" len = %d\n",printf("Origin =<%-7s> <%-7s> <%-7s>",teste, teste3, teste2));
+	// printf(" len = %d\n",printf("Origin =<%22s> <%22s> <%22s>",teste, "coco", "lelasdasde"));
+	// printf(" len = %d\n",ft_printf("MyFunc =<%22s> <%22s> <%22s>",teste, "coco", "lelasdasde"));
 	
 
-	printf(" len = %d\n",printf(" %p %p ", 0, 0));
-	printf(" len = %d\n",ft_printf(" %p %p ", 0, 0));
+	// printf(" len = %d\n",printf(" %p %p ", 0, 0));
+	// printf(" len = %d\n",ft_printf(" %p %p ", 0, 0));
 	
-	printf("\033[1;0m\nTESTE CHAR\033[1;32m\n");
-	printf(" len = %d\n",ft_printf("MyFunc =<%2c>", 'L'));
-	printf(" len = %d\n",printf("Origin =<%2c>", 'L'));
-	printf(" len = %d\n",ft_printf("MyFunc =<%-5c>", 'a'));
-	printf(" len = %d\n",printf("Origin =<%-5c>", 'a'));
+	// printf("\033[1;0m\nTESTE CHAR\033[1;32m\n");
+	// printf(" len = %d\n",ft_printf("MyFunc =<%2c>", 'L'));
+	// printf(" len = %d\n",printf("Origin =<%2c>", 'L'));
+	// printf(" len = %d\n",ft_printf("MyFunc =<%-5c>", 'a'));
+	// printf(" len = %d\n",printf("Origin =<%-5c>", 'a'));
 
-	printf("\033[1;0m\nTESTE MULT CHAR\033[1;32m\n");
-	printf(" len = %d\n",ft_printf("MyFunc =<%2c> <%2c> <%2c>", 'L', 'a', 'b'));
-	printf(" len = %d\n",printf("Origin =<%2c> <%2c> <%2c>", 'L', 'a', 'b'));
+	// printf("\033[1;0m\nTESTE MULT CHAR\033[1;32m\n");
+	// printf(" len = %d\n",ft_printf("MyFunc =<%2c> <%2c> <%2c>", 'L', 'a', 'b'));
+	// printf(" len = %d\n",printf("Origin =<%2c> <%2c> <%2c>", 'L', 'a', 'b'));
 	
-	printf(" len = %d\n",ft_printf(" %c,%c,%c ", '0', 0, '1'));	
-	printf(" len = %d\n",printf(" %c,%c,%c ", '0', 0, '1'));
-	printf(" len = %d\n",ft_printf(" %c %c %c ", '2', '1', 0));
-	printf(" len = %d\n",printf(" %c %c %c ", '2', '1', 0));
-	printf(" len = %d\n",ft_printf(" %c %c %c ", 0, '1', '2'));
-	printf(" len = %d\n",printf(" %c %c %c ", 0, '1', '2'));
+	// printf(" len = %d\n",ft_printf(" %c,%c,%c ", '0', 0, '1'));	
+	// printf(" len = %d\n",printf(" %c,%c,%c ", '0', 0, '1'));
+	// printf(" len = %d\n",ft_printf(" %c %c %c ", '2', '1', 0));
+	// printf(" len = %d\n",printf(" %c %c %c ", '2', '1', 0));
+	// printf(" len = %d\n",ft_printf(" %c %c %c ", 0, '1', '2'));
+	// printf(" len = %d\n",printf(" %c %c %c ", 0, '1', '2'));
 	
-	// printf("\033[1;0m\nTESTE ADRESS\033[1;32m\n");
-	// printf(" len = %d\n",printf("Origin =<%-20p>", teste));
+	// // printf("\033[1;0m\nTESTE ADRESS\033[1;32m\n");
+	// // printf(" len = %d\n",printf("Origin =<%-20p>", teste));
 	// printf(" len = %d\n",ft_printf("MyFunc =<%-20p>", teste));
 	// printf(" len = %d\n",printf("Origin =<%20p>", teste));
 	// printf(" len = %d\n",ft_printf("MyFunc =<%20p>", teste));
