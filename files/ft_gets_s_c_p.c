@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 19:01:01 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 16:57:25 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 16:59:29 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	ft_get_char(t_format *buffer)
 	int len;
 
 	buffer->formated_src = ft_calloc(2, sizeof(char));
-	buffer->formated_src[0] = va_arg(buffer->args_c, int);
+	buffer->formated_src[0] = va_arg(buffer->args_c, char);
 	len = 1;
 	if (*buffer->formated_src == 0)
 	{
