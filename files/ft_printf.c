@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 10:51:33 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/07 09:18:05 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 10:40:52 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,11 @@ int	ft_printf(const char *format, ...)
 	len = 0;
 	if (format == NULL)
 		return (len);
-	va_start(args, format);	
+	va_start(args, format);
 	len = ft_vfprintf(format , args);
 	va_end(args);
 	return (len);
 }
-
-
 
 int	ft_vfprintf(const char *format, va_list args)
 {
@@ -40,7 +38,7 @@ int	ft_vfprintf(const char *format, va_list args)
 			format +=  ft_check_all((char *)format + 1, buffer);
 			format++;
 			ft_putstr_fd(buffer->formated_src, 1);
-			free(buffer->formated_src);
+			ft_reset_struct(buffer);
 		}
 		else
 		{
@@ -49,6 +47,5 @@ int	ft_vfprintf(const char *format, va_list args)
 			format++;
 		}
 	}
-	va_end(buffer->args_c);
-	return (buffer->len);
+	return (ft_end_struct(buffer));
 }

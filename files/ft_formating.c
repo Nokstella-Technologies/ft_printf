@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 18:19:55 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/07 09:18:05 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 10:12:10 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,19 @@
 
 void	ft_formating(t_format *buffer)
 {
-	if(buffer->cf_now->conversion == 's')
-		return(ft_get_string(buffer));
-	else if(buffer->cf_now->conversion == 'c')
-		return(ft_get_char(buffer));
+	if (buffer->cf_now->conversion == 's')
+		return (ft_get_string(buffer));
+	else if (buffer->cf_now->conversion == 'c')
+		return (ft_get_char(buffer));
+	else if (buffer->cf_now->conversion == 'p')
+		return (ft_get_adress(buffer));
+	else if (buffer->cf_now->conversion == 'd' || 
+		buffer->cf_now->conversion == 'i')
+		return (ft_get_i_d(buffer));
+	else if(buffer->cf_now->conversion == 'u')
+		return(ft_get_u_x(buffer, "0123456789"));
+	else if(buffer->cf_now->conversion == 'x')
+		return(ft_get_u_x(buffer, HEX));
+	else if(buffer->cf_now->conversion == 'X')
+		return(ft_get_u_x(buffer, HEXU));
 }

@@ -9,8 +9,11 @@ SRCS =	ft_printf.c				\
 		ft_check_all.c			\
 		ft_formating.c			\
 		ft_check_errors.c		\
-		ft_gets_s_c.c			\
-		flags_formating.c		
+		ft_gets_s_c_p.c			\
+		ft_gets_i_d.c			\
+		ft_gets_u_x.c			\
+		flags_formating.c		\
+		flags_formating2.c		
 
 
 OBJS = $(SRCS:.c=.o)

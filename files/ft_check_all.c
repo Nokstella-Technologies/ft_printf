@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 18:19:52 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/07 09:18:05 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/07 19:27:22 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int	check_pointers(char *flag, t_format *buffer)
 	}
 	if(a == 1)
 		buffer->cf_now->flag_pointer = 6;
+	if(buffer->cf_now->flag_pointer == 0)
+		buffer->cf_now->flag_pointer = 1;
 	return (a);
 }
 

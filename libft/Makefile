@@ -46,7 +46,8 @@ SRCS = ft_isalpha.c	\
 		ft_lstiter.c		\
 		ft_lstmap.c			\
 		get_next_line.c		\
-		ft_strfstr.c
+		ft_strfstr.c		\
+		ft_itoa_base.c
 
 OBJS = $(SRCS:.c=.o)
 

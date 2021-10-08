@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 23:03:35 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/06 22:07:30 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/07 10:11:16 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,14 +163,6 @@ char	*ft_strchr(const char *str, int n);
  */
 char	*ft_strrchr(const char *str, int n);
 
-/**
- * @brief Function search if have one letter of ptr in str and return the firts letter
- * 
- * @param str to be searched
- * @param ptr to search all
- * @return char* the address of the first letters of ptr
- */
-char	*ft_strfstr(const char *str, const char *ptr);
 
 /**
  * @brief Function Comparer the S1 with the S2, until the N byte.
@@ -417,4 +409,16 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
+/*******************************OTHERS****************************************/
+
+/**
+ * @brief Function search if have one letter of ptr in str and return the firts letter
+ * 
+ * @param str to be searched
+ * @param ptr to search all
+ * @return char* the address of the first letters of ptr
+ */
+char	*ft_strfstr(const char *str, const char *ptr);
+
+char	*ft_itoa_base(size_t number, char *base);
 # endif
