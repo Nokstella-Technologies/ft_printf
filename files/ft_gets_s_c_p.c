@@ -6,11 +6,11 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 19:01:01 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 09:52:38 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 15:11:09 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 
 
@@ -45,7 +45,7 @@ void	ft_get_char(t_format *buffer)
 	{
 		free(buffer->formated_src);
 		buffer->formated_src = ft_strdup("");
-		buffer->cf_now->flag_align = false;
+		buffer->cf_now->flag_align = FALSE;
 	}
 	min_width_flag(buffer, &len);
 	buffer->len += len;
@@ -59,7 +59,7 @@ void	ft_get_adress(t_format *buffer)
 	if(buffer->formated_src)
 	{
 		len = ft_strlen(buffer->formated_src);
-		buffer->cf_now->flag_hashtag = true;
+		buffer->cf_now->flag_hashtag = TRUE;
 		hastag_flag(buffer, &len);
 	}
 	else
@@ -72,7 +72,10 @@ void	ft_get_adress(t_format *buffer)
 	buffer->len += len;
 }
 
-// void	ft_get_porcento(t_format *buffer)
-// {
-	
-// }
+void	ft_get_percent(t_format *buffer)
+{
+	buffer->formated_src = malloc(2 *sizeof(char));
+	buffer->formated_src[0] = '%';
+	buffer->formated_src[1] = 0;
+	buffer->len += 1;
+}

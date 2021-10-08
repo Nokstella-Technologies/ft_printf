@@ -19,31 +19,32 @@ SRCS =	ft_printf.c				\
 OBJS = $(SRCS:.c=.o)
 
 
-all:  $(NAME)
-	make clean
+all: $(NAME)
 
-$(NAME): $(LIBFT) $(OBJS)
+$(NAME): $(OBJS) $(LIBFT) 
+	cp libft/libft.a $(NAME)
 	ar -rcs $(NAME) $(OBJS)
-	ranlib $(NAME)
 
 $(LIBFT):
-	make all -C ./libft
-	cp libft/libft.a $(NAME)
+	make -C ./libft
+
 
 $(OBJS):
-	gcc -I ./headers $(CC_FLAGS) -c $(addprefix ./files/,$(SRCS))
+	gcc $(CC_FLAGS) -I./headers -c $(addprefix ./files/,$(SRCS))
 
 
 clean: 
 	rm -f $(OBJS) $(LIBFT_OBJS)
+	make fclean -C ./libft
 
 fclean: clean 
 	rm -f $(NAME)
 
 re: fclean all
 
+bonus: all
+
 teste: re
-	make all -C ./libft
-	@gcc -I ./headers main.c -L . -lftprintf -L ./libft -lft  && ./a.out -g3
+	gcc -I ./headers main.c -L . -lftprintf && ./a.out -g3
 
 .PHONY: all clean fclean re

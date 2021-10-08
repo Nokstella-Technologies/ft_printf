@@ -6,11 +6,11 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 18:19:55 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 10:12:10 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 14:57:29 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_formating(t_format *buffer)
 {
@@ -29,4 +29,6 @@ void	ft_formating(t_format *buffer)
 		return(ft_get_u_x(buffer, HEX));
 	else if(buffer->cf_now->conversion == 'X')
 		return(ft_get_u_x(buffer, HEXU));
+	else if(buffer->cf_now->conversion == '%')
+		return(ft_get_percent(buffer));
 }

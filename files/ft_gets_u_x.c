@@ -6,17 +6,17 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 10:05:32 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 10:22:51 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 14:51:18 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_get_u_x(t_format *buffer,char *base)
 {
 	int	len;
 
-	buffer->formated_src = ft_itoa_base(va_arg(buffer->args_c, size_t), base);
+	buffer->formated_src = ft_itoa_base(va_arg(buffer->args_c, unsigned), base);
 	if(!buffer->formated_src)
 	{
 		free(buffer->formated_src);

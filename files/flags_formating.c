@@ -6,15 +6,15 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 09:19:14 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 10:21:10 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 13:29:29 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	minus_flag(t_format *buffer, int *len, char *tmp)
 {
-	if (buffer->cf_now->flag_align == true)
+	if (buffer->cf_now->flag_align == TRUE)
 	{
 		ft_memcpy(tmp, buffer->formated_src, *len);
 	}
@@ -73,7 +73,7 @@ void	hastag_flag(t_format *buffer, int *len)
 {
 	char	*tmp;
 
-	if (buffer->cf_now->flag_hashtag == true)
+	if (buffer->cf_now->flag_hashtag == TRUE)
 	{
 		if (buffer->cf_now->conversion == 'p' || 
 			buffer->cf_now->conversion == 'x')

@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 10:51:38 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 10:41:42 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 14:56:09 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include "../libft/libft.h"
-#include <stdio.h>
 
 # define CONVERSIONS "cspdiuxX%"
 # define HEX "0123456789abcdef"
 # define HEXU "0123456789ABCDEF"
 
-typedef enum e_bool {true = 1, false = 2} t_bool;
+typedef enum e_bool {TRUE = 1, FALSE = 0} t_bool;
 
 typedef struct s_convert_flags{
 	char	conversion;
@@ -60,6 +59,7 @@ void		ft_get_char(t_format *buffer);
 void		ft_get_adress(t_format *buffer);
 void		ft_get_i_d(t_format *buffer);
 void		ft_get_u_x(t_format *buffer,char *base);
+void		ft_get_percent(t_format *buffer);
 
 void		pointer_flag(t_format *buffer, int *len);
 void		min_width_flag(t_format *buffer, int *len);

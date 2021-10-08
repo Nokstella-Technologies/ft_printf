@@ -52,10 +52,10 @@ SRCS = ft_isalpha.c	\
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
-	make clean
 
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
+
 
 $(OBJS): $(SRCS)
 	gcc -I . $(CC_FLAGS) -c $(SRCS)

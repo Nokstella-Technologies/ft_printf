@@ -6,27 +6,31 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 13:52:11 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 10:16:15 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 15:51:22 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-
+#include "ft_printf.h"
+#include <stdio.h>
 void	verify_signed_positin(t_format *buffer)
 {
 	char	*tmp;
 	char	*compare;
 	char	swap;
- 
-	tmp = ft_strfstr(buffer->formated_src,"-+");
-	if(*tmp != 0)
+
+	tmp = NULL;
+	tmp = ft_strfstr(buffer->formated_src,"+-");
+	if(tmp != NULL)
 	{
-		compare = tmp - 1;
-		while(*compare == '0' && compare != buffer->formated_src)
-			compare--;
-		swap = *tmp;
-		*tmp = *(compare + 1);
-		*(compare + 1) = swap;
+		if(tmp != buffer->formated_src)
+		{
+			compare = tmp - 1;
+			while(*compare == '0' && compare != buffer->formated_src)
+				compare--;
+			swap = *tmp;
+			*tmp = *(compare);
+			*(compare) = swap;
+		}
 	}
 }
 

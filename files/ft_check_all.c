@@ -6,11 +6,11 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 18:19:52 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/07 19:27:22 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 13:29:26 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	check_min_width(char *flag, t_format *buffer)
 {
@@ -46,15 +46,15 @@ int	check_pointers(char *flag, t_format *buffer)
 int	check_flags(char *flag, t_format *buffer)
 {
 	if(*flag == '-')
-		buffer->cf_now->flag_align = true;
+		buffer->cf_now->flag_align = TRUE;
 	else if(*flag == '0')
-		buffer->cf_now->flag_0 = true;
+		buffer->cf_now->flag_0 = TRUE;
 	else if(*flag == ' ')
-		buffer->cf_now->flag_space = true;
+		buffer->cf_now->flag_space = TRUE;
 	else if(*flag == '+')
-		buffer->cf_now->flag_plus = true;
+		buffer->cf_now->flag_plus = TRUE;
 	else if(*flag == '#')
-		buffer->cf_now->flag_hashtag = true;
+		buffer->cf_now->flag_hashtag = TRUE;
 	else 
 		return(0);
 	return(1);
