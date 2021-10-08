@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 18:19:50 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 18:10:18 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 18:11:46 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	ft_new_errors(t_format *buffer,int type)
 	}
 	else if(type == 2)
 	{
-		write(1,"\0", 1);
 		return(2);
 	}
 	return(1);
