@@ -47,4 +47,9 @@ bonus: all
 teste: re
 	gcc -I ./headers main.c -L . -lftprintf && ./a.out -g3
 
+git:
+	git add .
+	git commit -m final
+	git push
+
 .PHONY: all clean fclean re
