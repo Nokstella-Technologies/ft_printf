@@ -52,4 +52,7 @@ git:
 	git commit -m final
 	git push
 
+teste2: re
+	make m -C ./teste
+
 .PHONY: all clean fclean re
