@@ -44,15 +44,18 @@ re: fclean all
 
 bonus: all
 
-teste: re
+teste: update re
 	gcc -I ./headers main.c -L . -lftprintf && ./a.out -g3
 
-git:
+git: 
 	git add .
 	git commit -m final
 	git push
 
-teste2: re
+teste2: update re
 	make m -C ./teste
+
+update: 
+	git pull
 
 .PHONY: all clean fclean re
