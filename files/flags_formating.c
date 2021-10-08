@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 09:19:14 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 18:27:43 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 18:28:50 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	pointer_flag(t_format *buffer, int *len)
 	if(buffer->cf_now->flag_pointer == -1)
 	{
 		buffer->formated_src[0] = 0;
-		buffer->len = 1;
+		buffer->len += 0;
 	}
 }
 
