@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 13:28:39 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 18:13:50 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/08 18:32:12 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ int main(void)
 	
 	
 	printf("TESTE STRING\033[1;32m\n");
-	printf(" len = %d\n",ft_printf("MyFunc =<%-22s>", teste));
-	printf(" len = %d\n",printf("Origin =<%-22s>", teste));
+	printf(" len = %d\n",ft_printf(" %.2s %.3s %.4s %.5s %.1s ", " - ", "", "4", "", "2 "));
+	printf(" len = %d\n",printf(" %.2s %.3s %.4s %.5s %.1s ", " - ", "", "4", "", "2 "));
 	printf(" len = %d\n",ft_printf("MyFunc =<%.s>", ""));
 	printf(" len = %d\n",printf("Origin =<%.s>", ""));
 	printf(" len = %d\n",ft_printf("MyFunc =<%22s>", teste));
