@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 19:01:01 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 17:13:01 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 17:58:20 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,14 @@
 void	ft_get_string(t_format *buffer)
 {
 	int		len;
+	char	tmp;
 
-	buffer->formated_src = ft_strdup(va_arg(buffer->args_c, char *));
+	tmp = va_arg(buffer->args_c, char *);
+	if(tmp == NULL)
+	{
+		tmp = "(NULL)";
+	}
+	buffer->formated_src = ft_strdup(tmp);
 	len = (int)ft_strlen(buffer->formated_src);
 	pointer_flag(buffer, &len);
 	min_width_flag(buffer, &len);
