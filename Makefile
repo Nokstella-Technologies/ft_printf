@@ -40,7 +40,7 @@ clean:
 fclean: clean 
 	rm -f $(NAME)
 
-re: fclean all
+re: update fclean all
 
 bonus: all
 
