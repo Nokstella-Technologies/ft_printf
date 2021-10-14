@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 13:28:39 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 18:37:01 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 19:58:45 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,10 @@ int main(void)
 	printf("TESTE STRING\033[1;32m\n");
 	// printf(" len = %d\n",ft_printf(" %.2s %.3s %.4s %.5s %.1s ", " - ", "", "4", "", "2 "));
 	// printf(" len = %d\n",printf(" %.2s %.3s %.4s %.5s %.1s ", " - ", "", "4", "", "2 "));
-	printf(" len = %d\n",ft_printf(" %.s ",""));
-	printf(" len = %d\n",printf(" %.s ",""));
+	printf(" len = %d\n",ft_printf(" %02d ",-1));
+	printf(" len = %d\n",printf(" %02d ",-1));
+	printf(" len = %d\n",ft_printf(" %-2d ",-1));
+	printf(" len = %d\n",printf(" %-2d ",-1));
 	// printf(" len = %d\n",ft_printf("MyFunc =<%.s>", ""));
 	// printf(" len = %d\n",printf("Origin =<%.s>", ""));
 	// printf(" len = %d\n",ft_printf("MyFunc =<%22s>", teste));
