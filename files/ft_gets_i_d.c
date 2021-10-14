@@ -6,39 +6,41 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 13:52:11 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 16:49:43 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 19:46:27 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	verify_signed_positin(t_format *buffer)
+void	negative_sign(t_format *buffer, t_bool *flag)
 {
 	char	*tmp;
-	char	*compare;
-	char	swap;
 
 	tmp = NULL;
-	tmp = ft_strfstr(buffer->formated_src,"+-");
-	if(tmp != NULL)
+	if (*flag == FALSE && buffer->formated_src[0] == '-')
 	{
-		if(tmp != buffer->formated_src)
-		{
-			compare = tmp - 1;
-			while(*compare == '0' && compare != buffer->formated_src)
-				compare--;
-			swap = *tmp;
-			*tmp = *(compare);
-			*(compare) = swap;
-		}
+		*flag = TRUE;
+		tmp = ft_strdup(buffer->formated_src + 1);
+		free(buffer->formated_src);
+		buffer->formated_src = tmp;
+	}
+	else if (*flag == TRUE)
+	{
+		tmp = ft_strjoin("-", buffer->formated_src);
+		free(buffer->formated_src);
+		buffer->formated_src = tmp;
+		buffer->len = buffer->len + 1;
 	}
 }
 
 void	ft_get_i_d(t_format *buffer)
 {
 	int		len;
+	t_bool	flag;
 
 	buffer->formated_src = ft_itoa(va_arg(buffer->args_c, int));
+	flag = FALSE;
+	negative_sign(buffer, &flag);
 	if(!buffer->formated_src)
 	{
 		free(buffer->formated_src);
@@ -46,9 +48,9 @@ void	ft_get_i_d(t_format *buffer)
 	}
 	len = ft_strlen(buffer->formated_src);
 	pointer_flag(buffer, &len);
+	negative_sign(buffer, &flag);
 	min_width_flag(buffer, &len);
 	space_flag(buffer, &len);
 	plus_flag(buffer, &len);
-	verify_signed_positin(buffer);
 	buffer->len += len;
 }
