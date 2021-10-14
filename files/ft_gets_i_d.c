@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 13:52:11 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 20:03:17 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 20:32:51 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	ft_get_i_d(t_format *buffer)
 	len = ft_strlen(buffer->formated_src);
 	pointer_flag(buffer, &len);
 	negative_sign(buffer, &flag, &len);
-	min_width_flag(buffer, &len);
+	min_width_flag(buffer, &len, &flag);
 	space_flag(buffer, &len);
 	plus_flag(buffer, &len);
 	buffer->len += len;

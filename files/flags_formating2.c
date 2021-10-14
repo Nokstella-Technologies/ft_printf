@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 14:04:12 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 13:29:28 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 20:27:40 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,27 @@ void	space_flag(t_format *buffer, int *len)
 	}
 }
 
-void	zero_flag(t_format *buffer, char *tmp)
+void	hastag_flag(t_format *buffer, int *len)
 {
-	if(buffer->cf_now->flag_0 == TRUE && 
-		buffer->cf_now->flag_align == FALSE &&
-		buffer->cf_now->flag_pointer == 0)
-		ft_memset(tmp, '0', buffer->cf_now->min_width);
-	else
-		ft_memset(tmp, ' ', buffer->cf_now->min_width);
+	char	*tmp;
+
+	if (buffer->cf_now->flag_hashtag == TRUE && !(*len == 1 && 
+		*buffer->formated_src == '0'))
+	{
+		if (buffer->cf_now->conversion == 'p' || 
+			buffer->cf_now->conversion == 'x')
+		{
+			tmp = ft_strjoin("0x", buffer->formated_src);
+			free(buffer->formated_src);
+			buffer->formated_src = tmp;
+			*len += 2;
+		}
+		else if (buffer->cf_now->conversion == 'X')
+		{
+			tmp = ft_strjoin("0X", buffer->formated_src);
+			free(buffer->formated_src);
+			buffer->formated_src = tmp;
+			*len += 2;
+		}
+	}
 }

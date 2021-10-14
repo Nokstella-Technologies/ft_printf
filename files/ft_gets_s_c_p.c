@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 19:01:01 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 18:07:18 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 20:39:23 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_get_string(t_format *buffer)
 		buffer->formated_src = ft_strdup(tmp);
 	len = (int)ft_strlen(buffer->formated_src);
 	pointer_flag(buffer, &len);
-	min_width_flag(buffer, &len);
+	min_width_flag(buffer, &len, FALSE);
 	buffer->len += len;
 }
 
@@ -36,7 +36,7 @@ void	ft_get_char(t_format *buffer)
 	buffer->formated_src[0] = va_arg(buffer->args_c, unsigned int);
 	buffer->formated_src[1] = 0;
 	len = 1;
-	min_width_flag(buffer, &len);
+	min_width_flag(buffer, &len, FALSE);
 	buffer->len += len;
 }
 
@@ -50,7 +50,7 @@ void	ft_get_adress(t_format *buffer)
 	len = ft_strlen(buffer->formated_src);
 	buffer->cf_now->flag_hashtag = TRUE;
 	hastag_flag(buffer, &len);
-	min_width_flag(buffer, &len);
+	min_width_flag(buffer, &len, FALSE);
 	buffer->len += len;
 }
 
