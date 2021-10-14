@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 13:28:39 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 18:32:12 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 17:16:07 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,12 @@ int main(void)
 	// printf(" len = %d\n",ft_printf("MyFunc =<%2c> <%2c> <%2c>", 'L', 'a', 'b'));
 	// printf(" len = %d\n",printf("Origin =<%2c> <%2c> <%2c>", 'L', 'a', 'b'));
 	
-	// printf(" len = %d\n",ft_printf(" %c,%c,%c ", '0', 0, '1'));	
-	// printf(" len = %d\n",printf(" %c,%c,%c ", '0', 0, '1'));
-	// printf(" len = %d\n",ft_printf(" %c %c %c ", '2', '1', 0));
-	// printf(" len = %d\n",printf(" %c %c %c ", '2', '1', 0));
-	// printf(" len = %d\n",ft_printf(" %c %c %c ", 0, '1', '2'));
-	// printf(" len = %d\n",printf(" %c %c %c ", 0, '1', '2'));
+	printf(" len = %d\n",ft_printf(" %c,%c,%c ", '0', 0, '1'));	
+	printf(" len = %d\n",printf(" %c,%c,%c ", '0', 0, '1'));
+	printf(" len = %d\n",ft_printf(" %c %c %c ", '2', '1', 0));
+	printf(" len = %d\n",printf(" %c %c %c ", '2', '1', 0));
+	printf(" len = %d\n",ft_printf(" %c %c %c ", 0, '1', '2'));
+	printf(" len = %d\n",printf(" %c %c %c ", 0, '1', '2'));
 	
 	// // printf("\033[1;0m\nTESTE ADRESS\033[1;32m\n");
 	// // printf(" len = %d\n",printf("Origin =<%-20p>", teste));
