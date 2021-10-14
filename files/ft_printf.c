@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 10:51:33 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 17:18:31 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 17:54:14 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,18 @@ int	ft_printf(const char *format, ...)
 	return (len);
 }
 
+void	put_formated(t_format *buffer)
+{
+	char	*tmp;
+
+	tmp = buffer->formated_src;
+	if(*tmp)
+		while(*tmp++)
+			write(1, tmp++, 1);
+	else if(buffer->cf_now->conversion == 'c')
+		write(1, "\0", 1);
+}
+
 int	ft_vfprintf(const char *format, va_list args)
 {
 	t_format	*buffer;
@@ -37,7 +49,7 @@ int	ft_vfprintf(const char *format, va_list args)
 		{
 			format +=  ft_check_all((char *)format + 1, buffer);
 			format++;
-			ft_putstr_fd(buffer->formated_src, 1);
+			put_formated(buffer);
 			ft_reset_struct(buffer);
 		}
 		else

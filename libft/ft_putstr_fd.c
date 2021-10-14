@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 21:10:49 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 17:18:31 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 17:54:38 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-
-	if (*s != 0)
+	if (s)
 	{
 		while (*s)
 			write(fd, s++, 1);
 	}
-	else
-		write(1,"\0",1);
 }
