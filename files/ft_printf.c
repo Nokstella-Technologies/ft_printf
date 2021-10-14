@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 10:51:33 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 17:54:14 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 17:56:16 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ void	put_formated(t_format *buffer)
 	char	*tmp;
 
 	tmp = buffer->formated_src;
-	if(*tmp)
+	if (*tmp != 0)
 		while(*tmp++)
 			write(1, tmp++, 1);
-	else if(buffer->cf_now->conversion == 'c')
+	else if (buffer->cf_now->conversion == 'c' && *tmp == 0)
 		write(1, "\0", 1);
 }
 
