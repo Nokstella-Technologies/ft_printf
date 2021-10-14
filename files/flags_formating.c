@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 09:19:14 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 18:19:53 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 18:27:33 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,37 +25,6 @@ void	minus_flag(t_format *buffer, int *len, char *tmp)
 	}
 }
 
-void	pointer_flag(t_format *buffer, int *len)
-{
-	char	*tmp;
-	if (buffer->cf_now->flag_pointer < *len && buffer->formated_src[0] != 0)
-	{
-		if(buffer->cf_now->conversion == 's')
-		{
-			buffer->formated_src[buffer->cf_now->flag_pointer] = 0;
-			*len = buffer->cf_now->flag_pointer;
-		}
-		else if (buffer->cf_now->conversion == 'd' || 
-				buffer->cf_now->conversion == 'i' || 
-				buffer->cf_now->conversion == 'u' || 
-				buffer->cf_now->conversion == 'x' ||
-				buffer->cf_now->conversion == 'X' )
-		{
-			tmp = malloc(buffer->cf_now->flag_pointer + 1 *sizeof(char));
-			ft_memset(tmp, '0', buffer->cf_now->flag_pointer);
-			tmp[buffer->cf_now->flag_pointer] = 0;
-			ft_memcpy(&tmp[buffer->cf_now->flag_pointer - *len],buffer->formated_src, *len);
-			free(buffer->formated_src);
-			buffer->formated_src = tmp;
-			*len = buffer->cf_now->flag_pointer;
-		}
-	}
-	else if(buffer->cf_now->flag_pointer == -1)
-	{
-		buffer->formated_src[0] = 0;
-		*len = 0;
-	}
-}
 
 void	min_width_flag(t_format *buffer, int *len)
 {

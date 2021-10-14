@@ -14,6 +14,7 @@ SRCS =	ft_printf.c				\
 		ft_gets_u_x.c			\
 		flags_formating.c		\
 		flags_formating2.c		
+		flags_pointer.c		
 
 
 OBJS = $(SRCS:.c=.o)
