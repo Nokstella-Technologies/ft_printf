@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 10:51:38 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 20:40:40 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 21:11:56 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void		ft_get_u_x(t_format *buffer,char *base);
 void		ft_get_percent(t_format *buffer);
 
 void		pointer_flag(t_format *buffer, int *len);
-void		min_width_flag(t_format *buffer, int *len,t_bool *flag);
+void		min_width_flag(t_format *buffer, int *len,t_bool flag);
 void		hastag_flag(t_format *buffer, int *len);
 void		space_flag(t_format *buffer, int *len);
 void		plus_flag(t_format *buffer, int *len);
