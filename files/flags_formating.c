@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 09:19:14 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 21:12:43 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 21:15:46 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	minus_flag(t_format *buffer, int *len, char *tmp)
 {
 	if (buffer->cf_now->flag_align == TRUE)
-		ft_strlcpy(tmp, buffer->formated_src, *len + 1);
+		ft_memcpy(tmp, buffer->formated_src, *len);
 	else
 	{
 		ft_strlcpy(tmp + buffer->cf_now->min_width - *len ,
