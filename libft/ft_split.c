@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 17:44:14 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/09/10 23:47:54 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/20 21:12:12 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
-
 static size_t	CountS(char const *s, char c)
 {
 	size_t		count;
@@ -39,16 +38,16 @@ static size_t	CountS(char const *s, char c)
 
 	tmp = (char *)s;
 	count = 0;
-	while(*tmp != 0)
+	while (*tmp != 0)
 	{
 		while (*tmp == c && *tmp != 0)
 			++tmp;
 		while (*tmp != c && *tmp != 0)
 			++tmp;
-		if(*(tmp - 1) != c)
+		if (*(tmp - 1) != c)
 			count++;
 	}
-	return(count);
+	return (count);
 }
 
 static void	ft_fill_matrix(char const *s, char c, size_t num, char **res)

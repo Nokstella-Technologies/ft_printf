@@ -6,12 +6,11 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/23 14:33:27 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/07 11:17:28 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/18 19:06:18 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_loop(int size, size_t number, char *base, char *res)
 {
@@ -19,7 +18,7 @@ char	*ft_loop(int size, size_t number, char *base, char *res)
 	char	next_value[2];
 
 	next_value[1] = 0;
-	if(number >= (size_t)size)
+	if (number >= (size_t)size)
 	{
 		res = ft_loop(size, number / size, base, res);
 	}
@@ -36,8 +35,8 @@ char	*ft_itoa_base(size_t number, char *base)
 	int		base_size;
 	char	*res;
 
-	if(!number)
-		return(NULL);
+	if (!number)
+		return (NULL);
 	base_size = ft_strlen(base);
 	if (base_size < 2)
 		return (NULL);

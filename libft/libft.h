@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 23:03:35 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 14:34:19 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/20 21:13:45 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,7 +163,6 @@ char	*ft_strchr(const char *str, int n);
  * @return the address of the last N.
  */
 char	*ft_strrchr(const char *str, int n);
-
 
 /**
  * @brief Function Comparer the S1 with the S2, until the N byte.
@@ -413,13 +412,22 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 /*******************************OTHERS****************************************/
 
 /**
- * @brief Function search if have one letter of ptr in str and return the firts letter
+ * @brief Function search if have one letter of ptr in str and return the 
+ * firts letter
  * 
  * @param str to be searched
  * @param ptr to search all
  * @return char* the address of the first letters of ptr
  */
 char	*ft_strfstr(const char *str, const char *ptr);
-
+/**
+ * @brief function transforma a number in base 10 to base that was passed in 	
+ * the variable BASE 
+ * 
+ * @param number number to be transfomrmad
+ * @param base the base
+ * @return char* a adress with the number transformed 
+ */
 char	*ft_itoa_base(size_t number, char *base);
-# endif
+
+#endif

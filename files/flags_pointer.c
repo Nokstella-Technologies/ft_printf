@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 18:20:38 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 19:10:11 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/20 21:08:38 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	string_pointer(t_format *buffer, int *len)
 {
-	if (buffer->cf_now->flag_pointer < *len && 
-		buffer->cf_now->flag_pointer != 0 && buffer->formated_src[0] != 0)
+	if (buffer->cf_now->flag_pointer < *len
+		&& buffer->cf_now->flag_pointer != 0 && buffer->formated_src[0] != 0)
 	{
 		buffer->formated_src[buffer->cf_now->flag_pointer] = 0;
 		*len = buffer->cf_now->flag_pointer;
@@ -41,18 +41,18 @@ void	other_pointer(t_format *buffer, int *len)
 
 void	pointer_flag(t_format *buffer, int *len)
 {
-	if(buffer->cf_now->flag_pointer == -1)
+	if (buffer->cf_now->flag_pointer == -1)
 	{
-		if( buffer->formated_src[0] != 0)
+		if (buffer->formated_src[0] != 0)
 			buffer->formated_src[0] = 0;
 		*len = 0;
 	}
-	else if(buffer->cf_now->conversion == 's')
+	else if (buffer->cf_now->conversion == 's')
 		string_pointer(buffer, len);
-	else if (buffer->cf_now->conversion == 'd' || 
-		buffer->cf_now->conversion == 'i' || 
-		buffer->cf_now->conversion == 'u' || 
-		buffer->cf_now->conversion == 'x' ||
-		buffer->cf_now->conversion == 'X' )
+	else if (buffer->cf_now->conversion == 'd'
+		|| buffer->cf_now->conversion == 'i'
+		|| buffer->cf_now->conversion == 'u'
+		|| buffer->cf_now->conversion == 'x'
+		|| buffer->cf_now->conversion == 'X')
 		other_pointer(buffer, len);
 }

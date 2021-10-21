@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 13:52:11 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 21:12:04 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/14 22:13:37 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_get_i_d(t_format *buffer)
 	buffer->formated_src = ft_itoa(va_arg(buffer->args_c, int));
 	flag = FALSE;
 	negative_sign(buffer, &flag, &len);
-	if(!buffer->formated_src)
+	if (!buffer->formated_src)
 	{
 		free(buffer->formated_src);
 		buffer->formated_src = ft_strdup("0");

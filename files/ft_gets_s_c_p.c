@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 19:01:01 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 21:28:33 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/15 00:17:56 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_get_string(t_format *buffer)
 	char	*tmp;
 
 	tmp = va_arg(buffer->args_c, char *);
-	if(tmp == NULL)
+	if (tmp == NULL)
 		buffer->formated_src = ft_strdup("(null)");
 	else
 		buffer->formated_src = ft_strdup(tmp);
@@ -30,7 +30,7 @@ void	ft_get_string(t_format *buffer)
 
 void	ft_get_char(t_format *buffer)
 {
-	int len;
+	int	len;
 
 	buffer->formated_src = malloc(2 * sizeof(char));
 	buffer->formated_src[0] = va_arg(buffer->args_c, unsigned int);
@@ -46,7 +46,7 @@ void	ft_get_adress(t_format *buffer)
 	char	*tmp;
 
 	buffer->formated_src = ft_itoa_base(va_arg(buffer->args_c, size_t), HEX);
-	if(buffer->formated_src == NULL)
+	if (buffer->formated_src == NULL)
 		buffer->formated_src = ft_strdup("0");
 	tmp = ft_strjoin("0x", buffer->formated_src);
 	free(buffer->formated_src);
@@ -58,7 +58,7 @@ void	ft_get_adress(t_format *buffer)
 
 void	ft_get_percent(t_format *buffer)
 {
-	buffer->formated_src = malloc(2 *sizeof(char));
+	buffer->formated_src = malloc(2 * sizeof(char));
 	buffer->formated_src[0] = '%';
 	buffer->formated_src[1] = 0;
 	buffer->len += 1;

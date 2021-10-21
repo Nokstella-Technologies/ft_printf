@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 18:19:58 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/08 13:29:11 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/20 21:06:06 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,5 @@ int	ft_end_struct(t_format *buffer)
 	free(buffer->cf_now);
 	buffer->cf_now = NULL;
 	free(buffer);
-	return(len);
+	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 23:03:28 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/06 22:28:14 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/20 21:12:41 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ size_t	ft_strlen(const char *str)
 {
 	size_t	a;
 
-	if(str == NULL)
-		return(0);
+	if (str == NULL)
+		return (0);
 	a = 0;
 	while (str[a] != 0)
 		a++;

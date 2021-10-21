@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 10:25:10 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/09/07 10:48:04 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/10/20 21:12:28 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*s;
 
 	if (dest == NULL && src == NULL && n)
-		return (dest); 
+		return (dest);
 	s = (char *)src;
 	d = (char *)dest;
 	if (s < d)
