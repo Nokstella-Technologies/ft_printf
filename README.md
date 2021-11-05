@@ -1,6 +1,6 @@
 <div>
 <p align="center">
-   <img src="./files/faceTatoo.png" alt="Github-Explorer" width="500"/>
+   <img src="./github/faceTatoo.png" alt="Github-Explorer" width="500"/>
 </p>
 </div>
 <p align="center">
