@@ -6,7 +6,7 @@
 /*   By: luizz <luizz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 10:51:33 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/11/05 14:50:36 by luizz            ###   ########.fr       */
+/*   Updated: 2021/11/05 15:29:27 by luizz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ void	put_formated(t_format *buffer)
 
 	a = 0;
 	tmp = buffer->formated_src;
-		while (a < buffer->len_formated)
-		{
-			write(1, &tmp[a], 1);
-			a++;
-		}
+	while (a < buffer->len_formated)
+	{
+		write(1, &tmp[a], 1);
+		a++;
+	}
 }
 
 int	ft_vfprintf(const char *format, va_list args)

@@ -6,7 +6,7 @@
 /*   By: luizz <luizz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 18:19:52 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/11/05 15:11:01 by luizz            ###   ########.fr       */
+/*   Updated: 2021/11/05 15:29:17 by luizz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	check_pointers(char *flag, t_format *buffer)
 	int	a;
 
 	a = 1;
-	while (ft_isdigit(flag[a]) )
+	while (ft_isdigit(flag[a]))
 	{
 		buffer->cf_now->flag_pointer *= 10;
 		buffer->cf_now->flag_pointer += flag[a] - 48;
