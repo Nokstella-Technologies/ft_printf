@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: luizz <luizz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 10:51:38 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 22:12:46 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/11/05 14:49:35 by luizz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ typedef struct s_convert_flags {
 typedef struct s_format {
 	char			*formated_src;
 	int				len;
+	int				len_formated;
 	va_list			args_c;
 	t_convert_flags	*cf_now;
 }					t_format;

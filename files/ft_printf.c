@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: luizz <luizz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 10:51:33 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/15 00:21:39 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/11/05 14:50:36 by luizz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,15 @@ int	ft_printf(const char *format, ...)
 void	put_formated(t_format *buffer)
 {
 	char	*tmp;
+	int		a;
 
+	a = 0;
 	tmp = buffer->formated_src;
-	if (*tmp != 0)
-		while (*tmp)
-			write(1, tmp++, 1);
-	else if (buffer->cf_now->conversion == 'c')
-		write(1, "\0", 1);
+		while (a < buffer->len_formated)
+		{
+			write(1, &tmp[a], 1);
+			a++;
+		}
 }
 
 int	ft_vfprintf(const char *format, va_list args)

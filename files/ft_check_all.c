@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_all.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: luizz <luizz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 18:19:52 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/20 21:11:34 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/11/05 15:11:01 by luizz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	check_pointers(char *flag, t_format *buffer)
 	int	a;
 
 	a = 1;
-	while (ft_isdigit(flag[a]))
+	while (ft_isdigit(flag[a]) )
 	{
 		buffer->cf_now->flag_pointer *= 10;
 		buffer->cf_now->flag_pointer += flag[a] - 48;
@@ -39,6 +39,8 @@ int	check_pointers(char *flag, t_format *buffer)
 	}
 	if (a == 1)
 		buffer->cf_now->flag_pointer = -1;
+	if (a > 1 && buffer->cf_now->flag_pointer == 0)
+		buffer->cf_now->flag_pointer = -2;
 	return (a);
 }
 
@@ -46,7 +48,7 @@ int	check_flags(char *flag, t_format *buffer)
 {
 	if (*flag == '-')
 		buffer->cf_now->flag_align = TRUE;
-	else if (*flag == '0')
+	else if (*flag == '0' )
 		buffer->cf_now->flag_0 = TRUE;
 	else if (*flag == ' ')
 		buffer->cf_now->flag_space = TRUE;

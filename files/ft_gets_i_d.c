@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_gets_i_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: luizz <luizz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 13:52:11 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/10/14 22:13:37 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/11/05 14:50:25 by luizz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,5 @@ void	ft_get_i_d(t_format *buffer)
 	space_flag(buffer, &len);
 	plus_flag(buffer, &len);
 	buffer->len += len;
+	buffer->len_formated = len;
 }

@@ -41,22 +41,25 @@ clean:
 fclean: clean 
 	rm -f $(NAME)
 
-re: update fclean all
+re: fclean all
 
 bonus: all
 
+gdb:
+	gcc -g3 -I ./headers main.c $(addprefix ./files/,$(SRCS)) -L ./libft -lft 
+
+teste2: update re
+	cd teste2 && sh test
+
 teste: update re
-	gcc -I ./headers main.c -L . -lftprintf && ./a.out -g3
+	make a -C ./teste
 
 git: 
 	git add .
 	git commit -m final
 	git push
 
-teste2: update re
-	make dot -C ./teste
-
 update: 
 	git pull
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re teste2 gdb teste git update
